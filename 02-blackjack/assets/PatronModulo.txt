@@ -1,0 +1,13 @@
+() => {
+    'use stric' nos permite evaluar el codigo de manera estricta
+}
+
+Funcion anonima
+
+para llamarla (() =>{
+
+}).()
+
+(function() =>{
+
+}).()

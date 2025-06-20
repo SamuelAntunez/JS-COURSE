@@ -1,0 +1,18 @@
+Document
+
+Document.querySelector('body) 
+
+Nos permite recuperar el primer elemento que cumple la condicion especificada
+
+y el querySelector All: nos recupera todos los elementos que cumplan la condicion
+
+Document.querySelector('body).innerHTML = te permite poner texto directamente
+                             .innerText = te permite poner elementos innerHTML
+
+document.getElementById('') = busca eleemntos por el Id 
+        .getElementByClassName
+
+document.createElement('img')  te permite crear un elemento html
+
+        .append() nos permite insertar un elemento al final
+        .classList.add('btn') classList, nos muestra las clases y con add agregamos mas clases

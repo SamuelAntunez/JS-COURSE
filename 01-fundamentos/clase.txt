@@ -1,0 +1,31 @@
+Comentarios - // shortcut: ctrl /
+const: constante, contenido no modificable
+let: variable, se puede modificar el contenido
+
+Polyfill: Provee el funcionamiento de una nueva caracteristica de javascript(ES6) en versiones viejas de JS como ES5
+
+cuando se ven parentesis en js significa una funcion o un metodo
+
+alert, confirm y prompt son notificaciones bloqueantes
+prompt = la variable asignada sera tipo string
+confirm = devuelve un booleano
+
+datos primitivos 
+strings = todo lo colocado entre comillas son strings
+boolean 
+symbols
+undefined
+number 
+
+typeof variable nos da el tipo de datos
+
+Palabras reservadas (solo se pueden usar para eso)
+
+Arreglos:
+Metodos de los Arreglos
+arreglo.forEach(elemento, indice, arreglo)
+arreglo.push() inserta un nuevo elemento al final
+arreglo.unshift() inserta al inicio
+arreglo.pop() borra el ultimo y lo devuelve
+arreglo.splice(posicion, cantidad a borrar)
+arreglo.indexOf('elemento')  te devuelve la posicion del elemento en el arreglo / caseSensitive / si regresa -1 no encontro el elemento
