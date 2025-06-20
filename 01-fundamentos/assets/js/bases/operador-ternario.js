@@ -33,3 +33,4 @@ let mensaje;
  mensaje = (horaActual >= horaApertura) ? 'Esta abierto' : 'Esta cerrado'
 
  console.log({horaApertura, mensaje})
+ console.log([0,6].includes( dia ))
