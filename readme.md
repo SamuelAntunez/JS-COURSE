@@ -357,3 +357,99 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("El DOM está listo para usarse");
 });
 ```
+
+## Clases
+Una clase es como un molde o plantilla que define cómo deben ser los objetos: qué datos tienen (propiedades) y qué pueden hacer (métodos o funciones).
+
+Las clases en JavaScript son una forma más clara y estructurada de trabajar con objetos y herencia. Fueron introducidas en ECMAScript 2015 (ES6).
+
+### Sintaxis
+
+```js
+const objeto = {
+    nombre: 'Samuel',
+    edad: '24',
+    imprimir() {
+        console.log(`Nombre: ${this.nombre}`)
+    }
+}
+```
+* Para llamar la función del objeto utilizamos `objeto.imprimir()`
+* Para hacer referencia al mismo objeto se utiliza la palabra reservada `this`
+
+### Formas para crear una clase
+
+```js
+function Persona(nombre, edad) {
+    
+    this.nombre = nombre;
+    this.edad = edad;
+    this.imprimir = function(){
+        console.log(`Nombre: ${this.nombre} Edad: ${this.edad}`)
+    }
+};
+
+const maria = new Persona('Maria', 18)
+```
+* Al usar `this.nombre` estamos haciendo referencia a `Persona.nombre`
+* Al usar `new Persona()` estamos diciendo que vamos a crear una nueva instancia de persona y la almacenaremos en la variable `maria`
+
+
+### Forma moderna de trabajar con Clases en Javascript
+
+```js
+class Persona {
+    nombre;
+    codigo;
+    frase;
+    // constructor: metodo que se ejecuta cuando se crea una nueva instancia de la clase
+    constructor(nombre = 'Sin nombre', codigo = 'Sin codigo', frase = 'Sin frase') {
+        this.nombre = nombre;
+        this.codigo = codigo;
+        this.frase = frase;
+    }
+}
+
+const maria = new Persona(Maria, Vecina, 'Me gusta el pan')
+```
+
+### Metodos en las clases
+Son funciones que están definidas dentro de una clase y que describen el comportamiento que los objetos creados a partir de esa clase pueden realizar.
+
+```js
+class Calculadora {
+  sumar(a, b) {
+    return a + b;
+  }
+
+  restar(a, b) {
+    return a - b;
+  }
+}
+
+const miCalc = new Calculadora();
+console.log(miCalc.sumar(5, 3)); // 8
+console.log(miCalc.restar(5, 3)); // 2
+```
+
+### Metodo Get
+se usa para obtener el valor de una propiedad de forma controlada, como si accedieras directamente a ella, pero permitiendo ejecutar lógica adicional si lo necesitas.
+
+```js
+class Producto {
+  constructor(nombre, precio) {
+    this._nombre = nombre;
+    this._precio = precio;
+  }
+
+  get precio() {
+    return `$${this._precio}`;
+  }
+}
+
+const item = new Producto("Camiseta", 19.99);
+console.log(item.precio); // $19.99
+```
+El return se utiliza para devolver el valor deseado
+***
+### Metodo Set
